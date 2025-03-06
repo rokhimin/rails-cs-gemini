@@ -8,3 +8,115 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ .hero-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://i.imgur.com/MMnPvPl.png') center/cover no-repeat;
+}
+
+.coffee-card {
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.coffee-card:hover {
+    transform: translateY(-5px);
+}
+
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chat-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #6b4226;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chat-container {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 280px;
+    height: 350px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Responsive chat container for mobile */
+@media screen and (max-width: 768px) {
+    .chat-container {
+        width: calc(100% - 40px);
+        height: 350px;
+        bottom: 80px;
+        right: 20px;
+        left: 20px;
+    }
+    
+    .chat-button {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.chat-header {
+    background-color: #6b4226;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 10px;
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.user-message {
+    background-color: #e6f2ff;
+    margin-left: auto;
+}
+
+.bot-message {
+    background-color: #e6f2ff;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.footer {
+    background-color: #f5f5f5;
+    padding: 3rem 1.5rem;
+}
